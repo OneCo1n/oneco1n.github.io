@@ -152,6 +152,78 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Windows配置git-ssh环境" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/09/03/Windows%E9%85%8D%E7%BD%AEgit-ssh%E7%8E%AF%E5%A2%83/">Windows配置git环境——生成ssh公钥私钥</a>
+    </h1>
+  
+
+        
+        <a href="/2020/09/03/Windows%E9%85%8D%E7%BD%AEgit-ssh%E7%8E%AF%E5%A2%83/" class="archive-article-date">
+  	<time datetime="2020-09-03T07:44:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Windows配置git环境生成ssh公钥私钥"><a href="#Windows配置git环境生成ssh公钥私钥" class="headerlink" title="Windows配置git环境生成ssh公钥私钥"></a>Windows配置git环境生成ssh公钥私钥</h2><ol>
+<li>进入git bash，切换到用户目录cd ~</li>
+<li>第一条命令：ssh-keygen -t rsa -b 4096 -C “your_email@.com”，之后回车就行。</li>
+<li>第二条命令：eval $(ssh-agent -s)</li>
+<li>第三条命令：ssh-add ~/.ssh/id_rsa，之后ls .ssh就可以看到有文件目录了id_rsa(私钥)和id_rsa.pub(公钥)</li>
+<li>打开id_rsa.pub，复制文本内容，进入GitHub账户，进入setting，new ssh key选择SSH and GPG keys，粘贴到Key中，title可以标记一下。</li>
+</ol>
+<h6 id="测试SSH链接"><a href="#测试SSH链接" class="headerlink" title="测试SSH链接"></a>测试SSH链接</h6><p>输入命令：ssh -T <a href="mailto:&#103;&#105;&#x74;&#64;&#103;&#x69;&#x74;&#104;&#x75;&#x62;&#x2e;&#x63;&#x6f;&#109;">&#103;&#105;&#x74;&#64;&#103;&#x69;&#x74;&#104;&#x75;&#x62;&#x2e;&#x63;&#x6f;&#109;</a></p>
+<h6 id="github使用ssh密钥的好处与原因"><a href="#github使用ssh密钥的好处与原因" class="headerlink" title="github使用ssh密钥的好处与原因"></a>github使用ssh密钥的好处与原因</h6><p>git使用https协议，每次pull, push都要输入密码，相当的烦。<br>使用git协议，然后使用ssh密钥。这样可以省去每次都输密码。</p>
+<h6 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h6><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/love_fdu_llp/article/details/38752365">https://blog.csdn.net/love_fdu_llp/article/details/38752365</a><br><a target="_blank" rel="noopener" href="http://www.bilibili.com/video/BV1x7411F7HV">http://www.bilibili.com/video/BV1x7411F7HV</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/09/03/Windows%E9%85%8D%E7%BD%AEgit-ssh%E7%8E%AF%E5%A2%83/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-我的第一篇博客文章" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
