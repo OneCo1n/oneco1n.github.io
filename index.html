@@ -152,98 +152,6 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-利用hexo博客框架搭建个人博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="利用hexo博客框架搭建个人博客"><a href="#利用hexo博客框架搭建个人博客" class="headerlink" title="利用hexo博客框架搭建个人博客"></a>利用hexo博客框架搭建个人博客</h3><h4 id="一、前置步骤：首先安装Node-js（其中包括npm）"><a href="#一、前置步骤：首先安装Node-js（其中包括npm）" class="headerlink" title="一、前置步骤：首先安装Node.js（其中包括npm）   "></a>一、前置步骤：首先安装Node.js（其中包括npm）   </h4><ol>
-<li>直接去官网下载安装<a target="_blank" rel="noopener" href="https://nodejs.org/%E8%BF%99%E4%B8%AA%E5%AE%89%E8%A3%85%E6%AF%94%E8%BE%83%E7%AE%80%E5%8D%95%EF%BC%8C%E9%80%89%E5%AE%9A%E5%AE%89%E8%A3%85%E4%BD%8D%E7%BD%AE%EF%BC%8C%E4%B8%80%E7%9B%B4%E4%B8%8B%E4%B8%80%E6%AD%A5%E5%B0%B1%E8%A1%8C%E3%80%82">https://nodejs.org/这个安装比较简单，选定安装位置，一直下一步就行。</a><br>打开终端，在终端进行下一步操作<br>Windows系统：<br>（1）运行cmd。<br>（2）node -v和npm -v命令可以查看Node.js是否安装好。</li>
-<li>Mac OS：<br>（1）打开终端   <br>（2）切换到root用户   <br>（3）node -v和npm -v命令可以查看Node.js是否安装好。</li>
-</ol>
-<h4 id="二、安装hexo："><a href="#二、安装hexo：" class="headerlink" title="二、安装hexo："></a>二、安装hexo：</h4><p><strong>1. 利用npm安装cnpm</strong></p>
-<blockquote>
-<ul>
-<li>安装命令：<code>npm install -g cnpm --registry=https://registry.npm.taobao.org</code>，（registry设置镜像源，通过cnpm安装比较快，Windows和Mac命令一样）。   </li>
-<li>安装完成输入<code>cnpm -v</code>可以查看。</li>
-</ul>
-</blockquote>
-<p><strong>2.安装hexo</strong></p>
-<blockquote>
-<ul>
-<li>输入命令：<code>cnpm install -g hexo-cli</code>，会自动安装hexo，安装结束可以输入hexo -v查看。</li>
-<li>创建一个文件夹mkdir blog（也可以叫其他名字），进入blog目录中</li>
-<li>输入命令生成hexo博客：<code>sudo hexo init</code> （Mac）   <code>hexo init</code>（Windows）</li>
-</ul>
-</blockquote>
-<p><strong>3.启动hexo博客</strong>    </p>
-<blockquote>
-<ul>
-<li>命令：<code>hexo s</code>    会生成一个本地的连接，复制到浏览器就可以访问博客了。</li>
-</ul>
-</blockquote>
-<h4 id="三、写博客步骤："><a href="#三、写博客步骤：" class="headerlink" title="三、写博客步骤："></a>三、写博客步骤：</h4><ul>
-<li><code>hexo n</code> “文章名” –生成一篇新文章。   </li>
-<li>编辑文章   </li>
-<li><code> hexo clean</code></li>
-<li><code>hexo g</code> –生成文章</li>
-</ul>
-<h4 id="四、将博客部署到GitHub上"><a href="#四、将博客部署到GitHub上" class="headerlink" title="四、将博客部署到GitHub上"></a>四、将博客部署到GitHub上</h4><ul>
-<li>登录GitHub新建一个仓库，仓库名字最好为：你的GitHub昵称.github.io（之后访问博客的连接地址）</li>
-<li>打开命令行终端，安装git部署的插件，切换到之前建的blog目录下，输入命令：<code>cnpm install hexo-deployer-git</code>安装结束后，设置 <strong>_config.yml</strong>文件，在文件的最后<img src="en-resource://database/573:1" alt="e1ac04484843585789c20274f09def24.png"></li>
-<li>添加type和仓库地址之后保存关闭。<br><img src="en-resource://database/575:1" alt="9b473a441a1c66a61cefa26ef258db26.png"></li>
-<li>修改完之后输入命令：<code>hexo d</code>部署到远端，然后输入GitHub帐号和密码，就成功了。</li>
-</ul>
-<h4 id="修改博客主题"><a href="#修改博客主题" class="headerlink" title="修改博客主题"></a>修改博客主题</h4><p> <strong>下载主题</strong></p>
-<ul>
-<li><code>git clone</code> 主题链接.git 克隆到的文件夹</li>
-<li>*配置主题**</li>
-<li>修改_config.yml文件，找到theme，改为刚才下载主题的文件夹<img src="en-resource://database/577:1" alt="194da9b2e5d91501de13521a61127220.png"></li>
-<li>之后清理<code>hexo clean</code>并重新生成<code>hexo g</code>、<code>hexo s</code>本地没问题推到GitHub hexo d</li>
-</ul>
-<h5 id="参考链接："><a href="#参考链接：" class="headerlink" title="参考链接："></a>参考链接：</h5><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Yb411a7ty?from=search&amp;seid=11498560501175574686">https://www.bilibili.com/video/BV1Yb411a7ty?from=search&amp;seid=11498560501175574686</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/11/04/%E5%88%A9%E7%94%A8hexo%E5%8D%9A%E5%AE%A2%E6%A1%86%E6%9E%B6%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-VSCode中launch.json的介绍" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -359,6 +267,113 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2020/11/04/hello-world/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-利用hexo博客框架搭建个人博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/09/20/%E5%88%A9%E7%94%A8hexo%E5%8D%9A%E5%AE%A2%E6%A1%86%E6%9E%B6%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">利用hexo博客框架搭建个人博客</a>
+    </h1>
+  
+
+        
+        <a href="/2020/09/20/%E5%88%A9%E7%94%A8hexo%E5%8D%9A%E5%AE%A2%E6%A1%86%E6%9E%B6%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
+  	<time datetime="2020-09-20T09:24:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-20</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="利用hexo博客框架搭建个人博客"><a href="#利用hexo博客框架搭建个人博客" class="headerlink" title="利用hexo博客框架搭建个人博客"></a>利用hexo博客框架搭建个人博客</h3><h4 id="一、前置步骤：首先安装Node-js（其中包括npm）"><a href="#一、前置步骤：首先安装Node-js（其中包括npm）" class="headerlink" title="一、前置步骤：首先安装Node.js（其中包括npm）   "></a>一、前置步骤：首先安装Node.js（其中包括npm）   </h4><ol>
+<li>直接去官网下载安装<a target="_blank" rel="noopener" href="https://nodejs.org/%E8%BF%99%E4%B8%AA%E5%AE%89%E8%A3%85%E6%AF%94%E8%BE%83%E7%AE%80%E5%8D%95%EF%BC%8C%E9%80%89%E5%AE%9A%E5%AE%89%E8%A3%85%E4%BD%8D%E7%BD%AE%EF%BC%8C%E4%B8%80%E7%9B%B4%E4%B8%8B%E4%B8%80%E6%AD%A5%E5%B0%B1%E8%A1%8C%E3%80%82">https://nodejs.org/这个安装比较简单，选定安装位置，一直下一步就行。</a><br>打开终端，在终端进行下一步操作<br>Windows系统：<br>（1）运行cmd。<br>（2）node -v和npm -v命令可以查看Node.js是否安装好。</li>
+<li>Mac OS：<br>（1）打开终端   <br>（2）切换到root用户   <br>（3）node -v和npm -v命令可以查看Node.js是否安装好。</li>
+</ol>
+<h4 id="二、安装hexo："><a href="#二、安装hexo：" class="headerlink" title="二、安装hexo："></a>二、安装hexo：</h4><p><strong>1. 利用npm安装cnpm</strong></p>
+<blockquote>
+<ul>
+<li>安装命令：<code>npm install -g cnpm --registry=https://registry.npm.taobao.org</code>，（registry设置镜像源，通过cnpm安装比较快，Windows和Mac命令一样）。   </li>
+<li>安装完成输入<code>cnpm -v</code>可以查看。</li>
+</ul>
+</blockquote>
+<p><strong>2.安装hexo</strong></p>
+<blockquote>
+<ul>
+<li>输入命令：<code>cnpm install -g hexo-cli</code>，会自动安装hexo，安装结束可以输入hexo -v查看。</li>
+<li>创建一个文件夹mkdir blog（也可以叫其他名字），进入blog目录中</li>
+<li>输入命令生成hexo博客：<code>sudo hexo init</code> （Mac）   <code>hexo init</code>（Windows）</li>
+</ul>
+</blockquote>
+<p><strong>3.启动hexo博客</strong>    </p>
+<blockquote>
+<ul>
+<li>命令：<code>hexo s</code>    会生成一个本地的连接，复制到浏览器就可以访问博客了。</li>
+</ul>
+</blockquote>
+<h4 id="三、写博客步骤："><a href="#三、写博客步骤：" class="headerlink" title="三、写博客步骤："></a>三、写博客步骤：</h4><ul>
+<li><code>hexo n</code> “文章名” –生成一篇新文章。   </li>
+<li>编辑文章   </li>
+<li><code> hexo clean</code></li>
+<li><code>hexo g</code> –生成文章</li>
+</ul>
+<h4 id="四、将博客部署到GitHub上"><a href="#四、将博客部署到GitHub上" class="headerlink" title="四、将博客部署到GitHub上"></a>四、将博客部署到GitHub上</h4><ul>
+<li>登录GitHub新建一个仓库，仓库名字最好为：你的GitHub昵称.github.io（之后访问博客的连接地址）</li>
+<li>打开命令行终端，安装git部署的插件，切换到之前建的blog目录下，输入命令：<code>cnpm install hexo-deployer-git</code>安装结束后，设置 <strong>_config.yml</strong>文件，在文件的最后<img src="en-resource://database/573:1" alt="e1ac04484843585789c20274f09def24.png"></li>
+<li>添加type和仓库地址之后保存关闭。<br><img src="en-resource://database/575:1" alt="9b473a441a1c66a61cefa26ef258db26.png"></li>
+<li>修改完之后输入命令：<code>hexo d</code>部署到远端，然后输入GitHub帐号和密码，就成功了。</li>
+</ul>
+<h4 id="修改博客主题"><a href="#修改博客主题" class="headerlink" title="修改博客主题"></a>修改博客主题</h4><p> <strong>下载主题</strong></p>
+<ul>
+<li><code>git clone</code> 主题链接.git 克隆到的文件夹</li>
+<li>*配置主题**</li>
+<li>修改_config.yml文件，找到theme，改为刚才下载主题的文件夹<img src="en-resource://database/577:1" alt="194da9b2e5d91501de13521a61127220.png"></li>
+<li>之后清理<code>hexo clean</code>并重新生成<code>hexo g</code>、<code>hexo s</code>本地没问题推到GitHub hexo d</li>
+</ul>
+<h5 id="参考链接："><a href="#参考链接：" class="headerlink" title="参考链接："></a>参考链接：</h5><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Yb411a7ty?from=search&amp;seid=11498560501175574686">https://www.bilibili.com/video/BV1Yb411a7ty?from=search&amp;seid=11498560501175574686</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/09/20/%E5%88%A9%E7%94%A8hexo%E5%8D%9A%E5%AE%A2%E6%A1%86%E6%9E%B6%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">展开全文 >></a>
         </p>
       
 
